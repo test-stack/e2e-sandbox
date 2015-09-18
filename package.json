@@ -9,7 +9,6 @@
   "author": "Radim Daniel Panek <rdpanek@gmail.com> (https://github.com/test-stack)",
   "license": "ISC",
   "dependencies": {
-    "chai": "3.2.0",
-    "test-stack-harness": "0.2.0"
+    "chai": "3.2.0"
   }
 }

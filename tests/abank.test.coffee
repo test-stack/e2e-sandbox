@@ -1,11 +1,10 @@
+#noinspection JSUnresolvedVariable
 module.exports = ->
 
-  describe "Create new client", ->
+  describe 'Create new client', ->
 
-    homepage.open()
-
-    homepage.currentAccount.open()
+    airbank.homepage.currentAccount.open()
 
 module.exports.tags = [
-  'banka'
+  'airbank'
 ]

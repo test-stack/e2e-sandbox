@@ -1,23 +1,20 @@
 {expect} = require 'chai'
 
-abank =
-  url: 'http://www.airbank.cz'
+module.exports = (url, expectTitle) ->
 
-module.exports = ->
+  describe "Open home page #{url}", ->
 
-  describe "Open home page #{abank.url}", ->
+    it "open #{url}", (done) ->
+      client.url url, done
 
-    it "When open home page #{abank.url}", (done) ->
-      client.url abank.url, done
-
-    it "And wait for document ready state", (done) ->
+    it "wait for document ready state", (done) ->
       client.waitForDocumentReadyState client, done
 
-    it "Then title is I banku můžete mít rádi | Air Bank", (done) ->
+    it "#{expectTitle} is expect title", (done) ->
       client.getTitle().then (title) ->
         try
-          expect('I banku můžete mít rádi | Air Bank').to.eql title
+          expect(expectTitle).to.eql title
         catch e
-          {TestError} = depend.errors
+          {TestError} = dependencies.errors
           return done new TestError e
         done()

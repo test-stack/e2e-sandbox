@@ -1,6 +1,6 @@
-{expect} = require 'chai'
-
 module.exports = ->
+
+  homepage.open 'http://www.airbank.cz', 'I banku můžete mít rádi | Air Bank'
 
   describe 'Menu current account', ->
 
